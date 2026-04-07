@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Scope
+        </title>
+    </head>
+    <body>
+        <button onclick="abc()">Scope</button>
+        <p id="de"></p>
+        <p id="fg"></p>
+        <p id="d1"></p>
+        <p id="d2"></p>
+        <script>
+            var a=5
+            function abc() {
+                var b=2
+                document.getElementById("de").innerHTML=a*b;
+                document.getElementById("fg").innerHTML=a+b;
+            }
+            document.getElementById("d1").innerHTML=a;
+            document.getElementById("d2").innerHTML=b;
+        </script>
+    </body>
+</html>
