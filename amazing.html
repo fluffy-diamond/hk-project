@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            AMAzing
+        </title>
+    </head>
+    <body>
+        <p>AMAzing in diff forms</p>
+        <script>
+            var abc="AMAzing";
+            document.write(abc.toLowerCase());
+            document.write("<br>");
+            document.write(abc.toUpperCase());
+            document.write("<br>");
+            document.write(abc.startsWith('i'));
+            document.write("<br>");
+            document.write(abc.startsWith("A"));
+            document.write("<br>");
+            //Test method 
+            var abc1="The movie was amazing";
+            var patt=new RegExp("amazing");
+            var res=patt.test(abc1);
+            document.write(res);
+        </script>
+    </body>
+</html>
