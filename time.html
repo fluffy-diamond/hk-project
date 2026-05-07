@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Time
+        </title>
+    </head>
+    <body>
+        <button onclick="hi()">hello</button>
+        <script>
+            function hi(){
+                var hello;
+                var time=new Date().getHours;
+                if (time <=12){
+                    hello= "Good Morning";
+                }
+                else if (time <=16){
+                    hello= "Good Afternoon";
+                }
+                else {
+                    hello= "Good Evening";
+                }
+            document.write(hello);
+            }
+
+        </script>
+    </body>
+</html>
