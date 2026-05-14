@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Class
+        </title>
+    </head>
+    <body>
+        <script>
+            class student {
+                constructor(name, year){
+                    this.name=name;
+                    this.year=year;
+                }
+                age(){
+                    let date= new Date();
+                    return date.getFullYear()-this.year;
+                }
+            }
+            const stud1= new student("Heer",2011);
+            document.write(stud1.name+" is "+stud1.age()+" years old."+"<br>");
+
+            const stud2= new student("Divy",2014);
+            document.write(stud2.name+" is "+stud2.age()+" years old."+"<br>");
+
+            const stud3= new student("Hely",2017);
+            document.write(stud3.name+" is "+stud3.age()+" years old."+"<br>");
+        </script>
+    </body>
+</html>
