@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sort
+        </title>
+    </head>
+    <body>
+        <button onclick="acending()">Accending</button>
+        <button onclick="decending()">Decending</button>
+        <p id="result"></p>
+        <script>
+            var array=[10,39,1,6,27,99,111,38];
+            function acending(){
+                array.sort(function(a,b){
+                    return a-b;
+                });
+                document.getElementById("result").innerHTML=array;
+            }
+            function decending(){
+                array.sort(function(a,b){
+                    return b-a;
+                });
+                document.getElementById("result").innerHTML=array;
+            }
+        </script>
+    </body>
+</html>
