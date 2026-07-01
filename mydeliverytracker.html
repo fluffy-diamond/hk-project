@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My Delivery Tracker
+        </title>
+        <style>
+            h1 { color: midnightblue;}
+            button{color: white; background-color: violet; padding: 10px; border: 2.5px solid purple;}
+            div{border:1.5px solid black; width:200px ;margin: 5px;padding: 10px; background-color: bisque;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1> My Delivery Tracker</h1>
+            <button onclick="saveorder()"> Save Order </button>
+            <button onclick="startdelivery()"> Start Delivery</button>
+            <div>JSON Text: <span id="json-text"></span></div>
+            <div>Loaded Item: <span id="loaded-item"></span></div>
+            <div>Loaded Price: <span id="loaded-price"></span></div>
+            <div>Status: <span id="status"></span></div>
+            <div>Result: <span id="result"></span></div>
+        </center>
+        <script>
+            let order={
+                item:"Pizza",
+                price: "$5",
+                shop:"Happy shop",
+            };
+            function saveorder(){
+                let a=JSON.stringify(order);
+                let b=JSON.parse(a);
+                document.getElementById("json-text").innerHTML=a;
+                document.getElementById("loaded-item").innerHTML=b.item;
+                document.getElementById("loaded-price").innerHTML=b.price;
+            }
+            function delay(ms){
+                return new Promise(function(resolve){
+                    setTimeout(resolve,ms);
+                });
+            }
+        </script>
+    </body>
+</html>
